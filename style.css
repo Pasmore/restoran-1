@@ -1,0 +1,627 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  margin: 0px 166px;
+}
+
+/* HEADER */
+
+.header {
+  background-image: url(bg.jpg);
+  height: 800px; /* растянули фоновую картинку на весь монитор vh, но при уменш высоты hv перестраивается и нижн абсолю наезжа на верхний */
+  background-repeat: no-repeat;
+  background-size: cover; /*картинка растянится на весь экран*/
+}
+
+.header-line {
+  padding-top: 50px; /*отодвиныли заголовок от края экрана*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  margin-right: 25px;
+
+  transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+  color: #d81d1d;
+}
+
+.cart {
+  position: relative; /*блок стал отностительным для карзины*/
+
+  border-right: 1px solid #ffffff;
+  padding-right: 10px;
+  height: 50px;
+}
+
+.cart-img {
+  position: absolute; /*корзину возврашаем на место ушла из зи полоски*/
+  top: 18px;
+  right: 21px;
+}
+
+.num {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: color 0.3s linear;
+}
+
+.num:hover {
+  color: #d81d1d;
+}
+
+.phone-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+/*карт и номер в одну строку*/
+.phone-holder {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: #ff7400;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 18px;
+  font-weight: 700;
+  /* замедленное изменение цвета */
+  transition: background-color 0.2s linear;
+}
+
+.button:hover {
+  background-color: #894b17;
+}
+/* HEDAR */
+
+/* HEADER DOWN */
+.header-down {
+  position: relative; /*позиционируем тайтл для выравнвания*/
+}
+
+.header-title {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: #d67e35;
+
+  text-align: center;
+  position: absolute; /*выравниваем заговолок*/
+  left: 0;
+  margin-top: 200px;
+}
+
+.header-subtitle {
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.header-subtitle-end {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  color: #ffffff;
+}
+
+/*делаем полоски псевдокласами*/
+.header-subtitle-end:after {
+  position: absolute;
+  content: ""; /*контент нужн для линий*/
+  height: 2px;
+  width: 61px;
+  background-color: #fff;
+  top: 161px;
+  left: 102px;
+}
+
+.header-subtitle-end:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 61px;
+  background-color: #fff;
+  top: 161px;
+  left: 351px;
+}
+
+.header-button {
+  background-color: #ff7400;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+
+  transition: background-color 0.5s liner;
+}
+
+.header-button:hover {
+  background-color: #904506;
+}
+
+.block {
+  display: block;
+}
+.burger-slide {
+  position: absolute;
+}
+
+.disp {
+  display: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* HEADER DOWN */
+
+/* SECOND LIST */
+
+.cards-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -80px;
+}
+
+.card {
+  width: 349px;
+  /* box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1); */
+  box-shadow: 10px 10px 40px 20px #0000001a;
+  margin-right: 31px;
+  background-color: #fff;
+  padding: 0px 10px;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 32px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.card-description {
+  text-align: center;
+
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #656363;
+  margin-bottom: 20px;
+}
+
+.card-title span {
+  color: #bc9060;
+}
+
+/* SECOND LIST */
+.history {
+}
+
+.history-title {
+  width: 400px;
+  text-align: center;
+  margin-top: 166px;
+  font-family: "Tinos", serif;
+  font-size: 54px;
+}
+
+.history-title span {
+  color: #d67e34;
+}
+.history-desc {
+  width: 400px;
+  text-align: center;
+  padding-top: 10px;
+  color: #656363;
+  font-size: 16px;
+}
+
+.history-number {
+  display: flex;
+  justify-content: center;
+  width: 444px;
+  margin-top: 32px;
+}
+
+.number-item {
+  margin-right: 60px;
+  color: #bc9060;
+  font-size: 40px;
+
+  text-align: center;
+}
+
+.history-number span {
+  display: block;
+  color: #000000;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.history-container {
+  display: flex;
+}
+
+.history-img {
+  position: relative;
+}
+
+.history-img-item1 {
+  position: absolute;
+
+  top: 100px;
+  left: -27px;
+  z-index: 0;
+}
+
+.history-img-item2 {
+  position: absolute;
+
+  top: 72px;
+  left: 143px;
+  z-index: 2;
+}
+
+.history-img-item3 {
+  position: absolute;
+
+  top: 202px;
+  left: 300px;
+  z-index: 1;
+}
+/* THIRD */
+.black-block {
+  margin-top: 200px;
+  background-image: url(third-bg-color.png);
+  padding: 80px 0px;
+}
+
+.left-title {
+  font-family: Tinos;
+  font-size: 52px;
+  font-weight: 400;
+  text-align: left;
+  color: #d67e34;
+}
+.left-desc {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.right-btn {
+  background-color: #ff7400;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  /* замедленное изменение цвета */
+  transition: background-color 0.2s linear;
+}
+
+.right-btn:hover {
+  background-color: #894b17;
+}
+.block-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dishes-tite {
+  padding-top: 132px;
+  font-family: Tinos;
+  font-size: 54px;
+  font-weight: 400;
+  text-align: left;
+  color: #000000;
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+.dishes-tite span {
+  color: #d67e34;
+}
+.dishes-img {
+  display: flex;
+}
+.dishes-hamburger {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-img {
+  margin-left: 20px;
+  margin-bottom: 26px;
+  margin-right: 20px;
+}
+
+.hamburger-tetxt {
+  font-family: Tinos;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: left;
+}
+/* THIRD */
+/* FIFTH */
+.menu {
+  background-image: url(bar.jpg);
+}
+.menu-title {
+  font-family: Tinos;
+  font-size: 54px;
+  color: #fff;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 138px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.menu-item {
+  background-color: white;
+  width: 33.3%;
+  margin-right: 20px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 200px;
+}
+
+.menu-img {
+  position: relative;
+}
+.burger-img {
+  width: 200px;
+  height: 200px;
+}
+.burger-ellipse {
+  position: absolute;
+  bottom: 44px;
+  right: 53px;
+}
+
+.burger-price {
+  position: absolute;
+  bottom: 75px;
+  right: 76px;
+
+  font-weight: 400;
+  font-size: 30px;
+  color: white;
+}
+.burger-tite {
+  font-family: Tinos;
+  font-size: 26px;
+  font-weight: 400;
+}
+.burger-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.burger-btn {
+  padding-top: 30px;
+}
+.burger-button {
+  background-color: #d67e34;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 18px;
+  font-weight: 700;
+  /* замедленное изменение цвета */
+  transition: background-color 0.2s linear;
+}
+.burger-button:hover {
+  background-color: #894b17;
+}
+/* FIFTH */
+
+/* SIXTH */
+
+.coment-item {
+  text-align: center;
+  margin-top: 70px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+.coment-text {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.coment-img p:last-child {
+  font-size: 20px;
+  font-weight: 400;
+}
+.coment-img > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.gallery-title {
+  font-family: Tinos;
+  font-size: 54px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.gallery-collection {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-left {
+  margin-left: 20px;
+}
+.gallery-down,
+.gallery-up {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cook-title {
+  font-family: Tinos;
+  font-size: 54px;
+  font-weight: 400;
+  text-align: center;
+
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.cook-title span {
+  color: #d67e34;
+}
+
+.cook-gallary {
+  display: flex;
+  justify-content: space-around;
+}
+/* SIXTH */
+
+.footer {
+  background-color: #000000;
+  margin-top: 50px;
+
+  color: #fff;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.burger-menu {
+  display: none;
+}
+/* MOBVERSIA */
+@media (max-width: 1164px) {
+  .gallery-collection {
+    display: block;
+  }
+  .img-gal,
+  .gallery-down,
+  .gallery-up {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-gal {
+    margin-bottom: 20px;
+  }
+  .gallery-left {
+    margin-left: 0px;
+  }
+  .menu-items {
+    display: block;
+  }
+  .menu-item {
+    margin: 20px auto;
+    width: 350px;
+  }
+  .header-title {
+    position: static;
+  }
+  .header-subtitle-end:before,
+  .header-subtitle-end:after {
+    content: none;
+  }
+  .cook-gallary {
+    display: block;
+  }
+  .cook-gallary img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .block-holder {
+    display: block;
+  }
+  .left-title,
+  .left-desc,
+  .right-button {
+    text-align: center;
+  }
+  .right-button {
+    margin-top: 30px;
+  }
+  .history-img {
+    display: none;
+  }
+  .history-title,
+  .history-desc,
+  .history-number {
+    width: auto; /*убрали фиксированную ширину*/
+  }
+}
+
+@media (max-width: 1100px) {
+  .burger-menu {
+    display: block;
+  }
+  .nav,
+  .cart,
+  .phone,
+  .btn {
+    display: none;
+  }
+  .dishes-pizza {
+    display: none;
+  }
+  .cards-holder {
+    display: block;
+  }
+  .card {
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 30px;
+  }
+  .history-desc {
+    font-size: 24px;
+  }
+}
+
+/* MOBVERSIA */
